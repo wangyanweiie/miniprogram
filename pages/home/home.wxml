@@ -1,3 +1,16 @@
-<!--home.wxml-->
-<text class="title">我是home.wxml页面</text>
-<button size="mini">点击</button>
+<!--pages/home/home.wxml-->
+<text>Hello {{name}}</text>
+<view>{{movies[0].name}}</view>
+<view>{{movies[1].name}}</view>
+<view>{{movies[2].name}}</view>
+<view>{{movies[3].name}}</view>
+
+<!-- 列表展示: 遍历 -->
+<view wx:for="{{movies}}">
+  电影: {{item.name}}--主演: {{item.star}}
+</view>
+
+<!-- 事件监听 -->
+<view>当前计数: {{count}}</view>
+<button size="mini" bindtap="addCount">+</button>
+<button size="mini" bindtap="subCount">-</button>
