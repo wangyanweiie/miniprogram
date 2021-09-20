@@ -1,0 +1,3 @@
+<!--home.wxml-->
+<text class="title">我是home.wxml页面</text>
+<button size="mini">点击</button>
