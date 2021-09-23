@@ -1,32 +1,66 @@
 <!--
-  Text组件: 行内元素类似于span标签
-    * \n          行内元素件换行
-    * selectable  设置在真机上文本是否可以选中;
-    * space       设置文本中空格的大小
-    * decode      是否解码文本
+  Text组件: 行内元素,类似于span标签展示文本;
+    * \n           行内元素件换行
+    * user-select  设置在真机上文本是否可以选中;
+    * space        设置文本中空格的大小
+    * decode       是否解码文本
+    ......
 -->
-<text selectable>Hello {{name}}\n</text>
+<text>当前计数 count: {{count}}\n</text>
+<text user-select>Hello {{name}}\n</text>
 <text space="nbsp">Hello {{name}}\n</text>
-<text space="ensp">Hello {{name}}\n</text>
-<text space="emsp">Hello {{name}}\n</text>
 <text decode> Hello &gt; Hi\n</text>
 
 <!--
-  Button组件: 默认显示大图标块级元素
-    * size        设置按钮的大小,且mini行内块;
-    * type        设置按钮的类型颜色
-    * plain       设置按钮的镂空效果
-    * disabled    设置按钮禁止点击
-    * loading     设置按钮为加载中的状态
-    * hover-class 可以绑定class设置按钮点击后的颜色变化
+  Button组件: 默认显示大图标,块级元素;
+    * size         设置按钮的大小,且mini行内块;
+    * type         设置按钮的类型颜色
+    * plain        设置按钮的镂空效果
+    * disabled     设置按钮禁止点击
+    * loading      设置按钮为加载中的状态
+    * hover-class  可以绑定class设置按钮点击后的颜色变化
+    * bindtap      可以绑定响应函数监听按钮的点击事件
+    * open-type="getUserInfo"   设置按钮点击获取用户信息
+      bindgetuserinfo="响应事件"
+    ......
 -->
 <button size="mini">点击</button>
 <button size="mini" type="warn">点击</button>
 <button size="mini" plain>点击</button>
 <button size="mini" loading>点击</button>
 <button size="mini" hover-class="change">点击</button>
+<button size="mini" bindtap="addCount">count++</button>
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="getUserBtn">点击获取用户信息</button>
 
+<!--
+  view视图组件: 块级元素,类似于div常作为容器;
+    * hover-class 可以绑定class设置点击后的样式变化
+    * hover-stop-propagation  设置是否阻止点击事件冒泡
+    ......
+-->
+<view class="box" hover-class="change">哈哈</view>
+<view class="wrap" hover-class="wrapChange">
+  <view class="inner" 
+        hover-class="innerChange" 
+        hover-stop-propagation>
+  </view>
+</view>
 
+<!--
+  image组件: 内块元素,可以写成单标签,默认有固定大小占据页面位置 (320*240)
+    * src="路径"  本地图片/远程图片
+    * bindload    监听图片加载完成
+    * binderror   监听图片发生错误
+    * lazyload    设置图片懒加载 (前三屏依旧是一次性加载)
+    * mode        设置图片的裁剪模式与缩放模式,默认scaleToFill;
+    * show-menu-by-longpress  设置长按图片弹出识别小程序码
+-->
+<image src="https://img0.baidu.com/it/u=2072187263,1143403827&fm=26&fmt=auto" 
+       bindload="imgLoad"
+       lazy-load
+       show-menu-by-longpress
+       mode="aspectFit"/>
+<button size="mini" bindtap="getphoto">打开相册图片</button>
 
 
 
@@ -38,12 +72,7 @@
 <!-- open-data用于直接展示用户信息 -->
 <open-data type="userNickName"></open-data>
 
-<!-- 事件监听语法 -->
-<view>当前计数: {{count}}</view>
-<button size="mini" bindtap="addCount">+</button>
-<button size="mini" 
-        open-type="getUserInfo" 
-        bindgetuserinfo="getUserBtn">
-  点击获取用户信息
-</button>
+
+
+
 

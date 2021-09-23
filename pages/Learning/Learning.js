@@ -14,7 +14,8 @@ Page({
       {id: 113, name: '肖申克的救赎', star: 'Tim Robbins'}
       ],
     count:0,
-    homeData:{},
+    homeData:{},      //保存从服务器请求的用户数据
+    imagePath:[],     //保存用户上传的图片路径
   },
 
   //*****************1.页面的生命周期函数*****************
@@ -46,34 +47,30 @@ Page({
 
   //监听页面卸载
   onUnload() {
-    console.log('onunload');
   },
 
   //*****************2.页面相关事件处理函数*****************
   //监听用户下拉动作
   onPullDownRefresh() {
-
   },
 
   //页面上拉触底触发
   onReachBottom() {
-    console.log("页面触底")
-
   },
 
   //用户点击右上角分享
   onShareAppMessage() {
-
   },
+
   //页面滚动触发: 默认传参滚动的距离
   onPageScroll(obj){
-    console.log(obj)
   },
+
    //*****************3.自定义事件处理函数*****************
+   //1.错误方法: this.data.count++; 直接修改无法监听到内部属性的变化(无法实时响应)
+   //2.正确方法: 通过this.setData({})修改存放在data中的属性
   addCount(){
-    //1.错误方法: 无法监听到内部属性的变化(直接修改无法实时响应)
-    //this.data.count++;
-    //2.正确方法: 通过this.setData({})修改存放在data中的属性
+
     this.setData({
         count: this.data.count + 1
     })
@@ -82,4 +79,19 @@ Page({
   getUserBtn(event){
     console.log(event)
   },
+  //监听图片加载完成
+  imgLoad(){
+    console.log('图片加载完成')
+  },
+  //通过调用系统API,让用户选择相册图片或拍照;
+  getphoto(){
+    wx.chooseImage({
+      success: (res)=>{
+        //保存图片路径
+        this.setData({
+          imagePath: res.tempFilePaths
+        })
+      }
+    })
+  }
 })

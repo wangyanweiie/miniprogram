@@ -1,4 +1,25 @@
+.box{
+  height: 50px;
+  width: 50px;
+  background-color: skyblue;
+}
 .change{
   background-color: pink;
   color: white;
+}
+.wrap{
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+.inner{
+  width: 50px;
+  height: 50px;
+  background-color: purple;
+}
+.wrapChange{
+  background-color: pink;
+}
+.innerChange{
+  background-color: yellow;
 }
