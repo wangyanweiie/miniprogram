@@ -1,0 +1,49 @@
+<!--
+  Text组件: 行内元素类似于span标签
+    * \n          行内元素件换行
+    * selectable  设置在真机上文本是否可以选中;
+    * space       设置文本中空格的大小
+    * decode      是否解码文本
+-->
+<text selectable>Hello {{name}}\n</text>
+<text space="nbsp">Hello {{name}}\n</text>
+<text space="ensp">Hello {{name}}\n</text>
+<text space="emsp">Hello {{name}}\n</text>
+<text decode> Hello &gt; Hi\n</text>
+
+<!--
+  Button组件: 默认显示大图标块级元素
+    * size        设置按钮的大小,且mini行内块;
+    * type        设置按钮的类型颜色
+    * plain       设置按钮的镂空效果
+    * disabled    设置按钮禁止点击
+    * loading     设置按钮为加载中的状态
+    * hover-class 可以绑定class设置按钮点击后的颜色变化
+-->
+<button size="mini">点击</button>
+<button size="mini" type="warn">点击</button>
+<button size="mini" plain>点击</button>
+<button size="mini" loading>点击</button>
+<button size="mini" hover-class="change">点击</button>
+
+
+
+
+
+<!-- 列表展示: 遍历语法 -->
+<view wx:for="{{movies}}">
+  电影: {{item.name}} --{{item.star}}
+</view>
+
+<!-- open-data用于直接展示用户信息 -->
+<open-data type="userNickName"></open-data>
+
+<!-- 事件监听语法 -->
+<view>当前计数: {{count}}</view>
+<button size="mini" bindtap="addCount">+</button>
+<button size="mini" 
+        open-type="getUserInfo" 
+        bindgetuserinfo="getUserBtn">
+  点击获取用户信息
+</button>
+

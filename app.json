@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/Learning/Learning",
     "pages/home/home",
     "pages/profile/profile"
   ],
@@ -13,6 +14,12 @@
   },
   "tabBar": {
     "list": [
+      {
+        "pagePath": "pages/Learning/Learning",
+        "text": "Learn",
+        "iconPath": "",
+        "selectedIconPath": ""
+      },
       {
         "pagePath": "pages/home/home",
         "text": "首页",
