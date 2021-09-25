@@ -49,11 +49,13 @@
 <!--
   image组件: 内块元素,可以写成单标签,默认有固定大小占据页面位置 (320*240)
     * src="路径"  本地图片/远程图片
-    * bindload    监听图片加载完成
-    * binderror   监听图片发生错误
     * lazyload    设置图片懒加载 (前三屏依旧是一次性加载)
     * mode        设置图片的裁剪模式与缩放模式,默认scaleToFill;
     * show-menu-by-longpress  设置长按图片弹出识别小程序码
+      ---------
+    * bindload    监听图片加载完成事件
+    * binderror   监听图片发生错误事件
+    ......
 -->
 <image src="https://img0.baidu.com/it/u=2072187263,1143403827&fm=26&fmt=auto" 
        bindload="imgLoad"
@@ -61,6 +63,27 @@
        show-menu-by-longpress
        mode="aspectFit"/>
 <button size="mini" bindtap="getphoto">打开相册图片</button>
+
+<!--
+  input组件: 可以写成单标签,默认透明色;
+  * type          设置弹出的键盘类型(真机可见)
+  * placeholder   阴影提示文字
+  * password      设置密码框输入内容不可见
+  * disabled      设置输入框禁用
+  * confirm-type  设置弹出键盘右下角完成的文字,仅在type="text"时有效;
+    --------
+  * bindinput     当输入框输入内容时触发
+  * bindfocus     当输入框过去焦点时触发
+  * bindblur      当输入框失去焦点时触发
+  * bindconfirm   当输入框输入点击完成时触发
+  ......
+-->
+<input/>
+<input type="idcard"/>
+<input placeholder="请输入用户名"/>
+<input type="text" confirm-type="search"/>
+
+
 
 
 
