@@ -11,10 +11,23 @@
     * wx:for-item:"变量名"   可在嵌套时区分item的名字提高可读性
     * wx:key="唯一标识"      可以提高性能(高效更新虚拟DOM 同vue)
 
-  5. 模板语法: template
+  5.模板语法: template
     * 作用: 提高代码复用
-    * template创建时需要加属性name="变量名",使用时需要加属性is="变量名";
     * 模板中包裹的内容在没有使用前是不会进行任何渲染的
+    * 可以直接抽离成单独的文件,进行引入方便复用;(不可以递归导入)
+      <import src="定义的模板文件的路径"/>
+      <include src="定义的模板文件的路径"/>
+    * 语法: 
+      ①普通使用: 
+        <template name="标识名">...</template>   
+        <template is="标识名">
+      ②传值使用:
+        <template name="标识名">
+          <text>{{变量名key1}}</text>
+          <text>{{变量名key2}}\n</text>
+        </template>   
+        <template is="标识名" data="key1:val1,key2:val2">
+
   6.
  -->
 
@@ -28,10 +41,17 @@
   {{index}}: 电影{{item.name}} --{{item.star}}
 </view>
 <!-- templte -->
-<template name="content">
+<template name="content1">
   <text>王言伟</text>
-  <text>皮卡皮卡July\n</text>
+  <text>740484522\n</text>
 </template>
-<template is="content"/>
-<template is="content"/>
+<template name="content2">
+  <text>{{name}}</text>
+  <text>{{QQ}}\n</text>
+</template>
+
+<template is="content1"/>
+<template is="content1"/>
+<template is="content2" data="{{name:'邵思彤',QQ:1248406277}}"/>
+<template is="content2" data="{{name:'王若兮',QQ:1248406277}}"/>
 

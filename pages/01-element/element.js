@@ -75,7 +75,6 @@ Page({
   },
   //监听图片加载完成
   imgLoad(){
-    console.log('图片加载完成')
   },
   //通过调用系统API,让用户选择相册图片或拍照;
   getphoto(){

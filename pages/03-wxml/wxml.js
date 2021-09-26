@@ -1,4 +1,3 @@
-// pages/03-wxml/wxml.js
 Page({
   data:{
     movies: [
