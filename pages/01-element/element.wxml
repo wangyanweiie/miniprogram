@@ -66,16 +66,16 @@
 
 <!--
   input组件: 可以写成单标签,默认透明色;
-  * type          设置弹出的键盘类型(真机可见)
-  * placeholder   阴影提示文字
-  * password      设置密码框输入内容不可见
-  * disabled      设置输入框禁用
-  * confirm-type  设置弹出键盘右下角完成的文字,仅在type="text"时有效;
+    * type          设置弹出的键盘类型(真机可见)
+    * placeholder   阴影提示文字
+    * password      设置密码框输入内容不可见
+    * disabled      设置输入框禁用
+    * confirm-type  设置弹出键盘右下角完成的文字,仅在type="text"时有效;
     --------
-  * bindinput     当输入框输入内容时触发
-  * bindfocus     当输入框过去焦点时触发
-  * bindblur      当输入框失去焦点时触发
-  * bindconfirm   当输入框输入点击完成时触发
+    * bindinput     当输入框输入内容时触发
+    * bindfocus     当输入框过去焦点时触发
+    * bindblur      当输入框失去焦点时触发
+    * bindconfirm   当输入框输入点击完成时触发
   ......
 -->
 <input/>
@@ -83,14 +83,36 @@
 <input placeholder="请输入用户名"/>
 <input type="text" confirm-type="search"/>
 
+<!--
+  scroll-view组件：局部滚动
+    * scroll-x          设置局部水平滚动
+    * scroll-y          设置局部垂直滚动
+    -----------
+    * bindscroll        监听局部滚动的位置
+    * bindscrolltoupper 监听滚动到顶部或者左侧
+    * bindscrolltolower 监听滚动到底部或者右侧
+  ......
+-->
+<scroll-view class="scroll1" scroll-x>
+  <view wx:for="{{10}}" class="item1">哈哈哈</view>
+</scroll-view>
+<scroll-view class="scroll2" 
+             scroll-y 
+             bindscroll="getScroll"
+             bindscrolltoupper="scrollToTop"
+             bindscrolltolower="scrollToDown">
+  <view wx:for="{{10}}" class="item2">嘿嘿嘿</view>
+</scroll-view>
 
-
-
-
-<!-- 列表展示: 遍历语法 -->
-<view wx:for="{{movies}}">
-  电影: {{item.name}} --{{item.star}}
-</view>
+<!-- 
+  组件的共同属性: 所有组件共有的一些属性
+    * id              组件唯一的标识(不能重复)
+    * class           组件的样式类
+    * style           动态设置组件的内联样式
+    * hidden          设置组件是否显示
+    * bind../catch..  组件的事件
+    * data-..         自定义属性,组件上触发的事件;
+ -->
 
 <!-- open-data用于直接展示用户信息 -->
 <open-data type="userNickName"></open-data>

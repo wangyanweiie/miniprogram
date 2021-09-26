@@ -7,12 +7,6 @@ Page({
   //*****************页面的初始数据*****************
   data: {
     name: "网易云音乐",
-    movies: [
-      {id: 110, name: '大话西游', star: '周星驰'},
-      {id: 111, name: '澳门风云', star: '周润发'},
-      {id: 112, name: '唐人街探案', star: '王宝强'},
-      {id: 113, name: '肖申克的救赎', star: 'Tim Robbins'}
-      ],
     count:0,
     homeData:{},      //保存从服务器请求的用户数据
     imagePath:[],     //保存用户上传的图片路径
@@ -93,5 +87,17 @@ Page({
         })
       }
     })
+  },
+  //监听局部滚动的位置
+  getScroll(event){
+    console.log(event.detail.scrollTop)
+  },
+  //监听滚动到顶部或者左侧
+  scrollToTop(){
+    console.log("滚动到顶部")
+  },
+  //监听滚动到底部或者右侧
+  scrollToDown(){
+    console.log("滚动到底部")
   }
 })

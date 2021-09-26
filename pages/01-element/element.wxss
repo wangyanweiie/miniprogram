@@ -27,3 +27,27 @@ input{
   border: 1px solid #ccc;
   margin: 10px 20px;
 }
+.scroll1{
+  background-color: pink;
+  /* 不换行显示 */
+  white-space: nowrap;
+}
+.item1{
+  height: 30px;
+  line-height: 30px;
+  width: 50px;
+  background-color:purple;
+  margin: 5px;
+  display: inline-block;
+}
+.scroll2{
+  height: 150px;
+  background-color: skyblue;
+}
+.item1{
+  height: 30px;
+  line-height: 30px;
+  width: 50px;
+  background-color:purple;
+  margin: 5px;
+}

@@ -1,0 +1,28 @@
+<!-- 
+  1.设置样式的三种方式: 优先级(行内>页内>全局)
+    * 行内样式    style="样式名：样式值；"
+    * 页内样式    class="{}""对应的样式写在自己页面的wxss文件中
+    * 全局样式    class="{}"对应的样式放在app.wxss文件中
+
+  2.支持的选择器
+    * id选择器        #id
+    * class选择器     .class
+    * 元素选择器      标签名
+    * 伪元素选择器    ::before/::after
+
+  3.单位: rpx
+    * 可根据机型自动适配元素区域大小与字体大小
+    * 在iphoine5机型下      1px = 2.34rpx
+      在iphoine6机型下      1px = 2rpx(作为设计稿标准)
+      在iphoine6Plus机型下  1px = 1.81rpx
+
+  4.样式导入: @import '样式所在的路径(相对/绝对)'
+  5.官方样式库
+    * https://github.com/Tencent/weui-wxss
+    * 下载打开dist文件夹导入需要组件的 wxml以及wxss与js文件内容
+ -->
+<view style="color: purple;">wxss页面-行内样式</view>
+<view class="pageStyle">wxss页面-页内样式</view>
+<view class="wxssStyle">wxss页面-全局样式</view>
+<view class="box1">固定</view>
+<view class="box2">自适应</view>

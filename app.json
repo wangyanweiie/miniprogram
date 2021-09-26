@@ -1,6 +1,8 @@
 {
   "pages": [
-    "pages/Learning/Learning",
+    "pages/03-wxml/wxml",
+    "pages/01-element/element",
+    "pages/02-wxss/wxss",
     "pages/home/home",
     "pages/profile/profile"
   ],
@@ -15,10 +17,16 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/Learning/Learning",
-        "text": "Learn",
-        "iconPath": "",
-        "selectedIconPath": ""
+        "pagePath": "pages/01-element/element",
+        "text": "element"
+      },
+      {
+        "pagePath": "pages/02-wxss/wxss",
+        "text": "wxss"
+      },
+      {
+        "pagePath": "pages/03-wxml/wxml",
+        "text": "wxml"
       },
       {
         "pagePath": "pages/home/home",
