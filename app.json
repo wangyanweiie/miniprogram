@@ -3,11 +3,11 @@
     "pages/home/home",
     "pages/profile/profile",
     "pages/component/component",
-    "pages/01-element/element",
-    "pages/02-wxss/wxss",
-    "pages/03-wxml/wxml",
-    "pages/04-wxs/wxs",
-    "pages/05-event/event"
+    "pages/Learning/01-element/element",
+    "pages/Learning/02-wxss/wxss",
+    "pages/Learning/03-wxml/wxml",
+    "pages/Learning/04-wxs/wxs",
+    "pages/Learning/05-event/event"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ff3b48",
