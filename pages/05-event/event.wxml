@@ -1,0 +1,48 @@
+<!-- 
+  1.事件绑定的语法: 以tap事件为例
+    bindtap = "响应函数"
+    bind:tap = "响应函数"
+    catchtap = "响应函数"
+    catch:tap = "响应函数"
+
+  2.常见的事件类型
+    * input: bindinput、bindfocus、bindblur等
+    * scroll-view: bindscrolltowpper、bindscrolltolower等
+    * touchstart      手指触摸开始触发
+    * touchmove       手指触摸后移动触发
+    * touchcancel     手指触摸动作被打断触发(电话、弹窗)
+    * touchend        手指触摸结束触发
+    * tap             手指触摸后马上离开触发
+    * longpress       手指触摸超过350ms后离开触发
+
+  3.event事件对象的常见属性
+    * type            事件类型
+    * timeStamp       页面打开到触发事件所经过的毫秒数
+    * target          触发事件的组件的一些属性值集合
+    * currentTarget   当前组件的一些属性值集合(存在冒泡时target与currentTarget不同)
+    * detail          额外信息(点击位置的坐标)
+    * touchs          触摸事件,当前停留在屏幕中的触摸点信息的数组;
+    * changedTouches  触摸事件,当前变化的触摸点信息的数组;
+
+  4.事件的传递参数
+    * 语法: data-变量名="{{传递值}}"
+    * 传递的参数直接保存到 event.target.dataset
+
+  5.事件的捕获与冒泡
+ -->
+ <button size="mini" bindtap="clickBtn">点击</button>
+ <button size="mini" bind:tap="clickBtn">点击</button>
+ <button size="mini" catchtap="clickBtn">点击</button>
+ <button size="mini" catch:tap="clickBtn">点击</button>
+ <!-- target与currentTarget的区别 -->
+ <view id="wrap" class="wrap" bindtap="wrapBtn">
+  <view id="inner" class="inner" bindtap="innerBtn"></view>
+ </view>
+ <!-- 事件传参 -->
+ <block wx:for="{{movies}}"  wx:key="{{index}}">
+  <view bindtap="moviesClick"
+        data-index="{{index}}"
+        data-item="{{item}}">
+    {{item}}
+  </view>
+</block>

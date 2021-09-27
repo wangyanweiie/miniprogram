@@ -1,0 +1,10 @@
+  var name = "邵思彤";
+  var QQ = 1248406277;
+  var sum = function(a,b) {
+    return a + b;
+  }
+  module.exports = {
+    name:name,
+    QQ:QQ,
+    sum:sum
+    }

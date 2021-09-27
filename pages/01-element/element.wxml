@@ -114,7 +114,9 @@
     * data-..         自定义属性,组件上触发的事件;
  -->
 
-<!-- open-data用于直接展示用户信息 -->
+<!-- 
+  open-data: 用于直接展示用户信息 
+-->
 <open-data type="userNickName"></open-data>
 
 

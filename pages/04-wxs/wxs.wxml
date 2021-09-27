@@ -1,1 +1,39 @@
+<!-- 
+  1.理解
+    * 在wxml中不能直接调用Page/Component中定义的函数,
+    * 若希望可以用函数处理wxml中的数据就需要使用 wxs;(类似于vue中的过滤器)
 
+  2.定义方式
+  （1）在wxml文件内部定义
+      * 语法:<wxs module="标识名">
+            ...
+            module.exports = {需要导出的变量}
+          </wxs>
+      * 调用: 时需要通过 {{标识名.变量名}} 获取wxs中的内容;
+      * 注意: 在wxs标签中只能写Js的ES5语法,ES6的语法无效;
+  （2）外部导入单独的wxs的文件
+      * 语法: <wxs src='文件路径' module="标识名"/>
+      * 调用: {{标识名.变量名}}
+-->
+<!-- 1.内部定义 -->
+<wxs module="info">
+  var name = "王言伟";
+  var QQ = 740484522;
+  var sum = function(a,b) {
+    return a + b;
+  }
+  module.exports = {
+    name:name,
+    QQ:QQ,
+    sum:sum
+    }
+</wxs>
+<view>{{info.name}}</view>
+<view>{{info.QQ}}</view>
+<view>{{info.sum(5,10)}}</view>
+
+<!-- 2.外部导入 -->
+<wxs src='info.wxs' module="mes"/>
+<view>{{mes.name}}</view>
+<view>{{mes.QQ}}</view>
+<view>{{mes.sum(15,10)}}</view>

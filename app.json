@@ -1,11 +1,13 @@
 {
   "pages": [
-    "pages/04-wxs/wxs",
+    "pages/home/home",
+    "pages/profile/profile",
+    "pages/component/component",
     "pages/01-element/element",
     "pages/02-wxss/wxss",
     "pages/03-wxml/wxml",
-    "pages/home/home",
-    "pages/profile/profile"
+    "pages/04-wxs/wxs",
+    "pages/05-event/event"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ff3b48",
@@ -18,24 +20,14 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/01-element/element",
-        "text": "element"
-      },
-      {
-        "pagePath": "pages/02-wxss/wxss",
-        "text": "wxss"
-      },
-      {
-        "pagePath": "pages/03-wxml/wxml",
-        "text": "wxml"
-      },
-      {
-        "pagePath": "pages/04-wxs/wxs",
-        "text": "wxs"
-      },
-      {
         "pagePath": "pages/home/home",
         "text": "首页",
+        "iconPath": "",
+        "selectedIconPath": ""
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
         "iconPath": "",
         "selectedIconPath": ""
       }
