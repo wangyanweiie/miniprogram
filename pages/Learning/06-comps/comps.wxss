@@ -1,0 +1,10 @@
+view{
+  /* 标签选择器: 外部样式,对组件内部产生了影响 */
+  border: 1rpx solid #ccc;
+}
+.purple{
+  color: purple;
+}
+.blue{
+  color: blue;
+}

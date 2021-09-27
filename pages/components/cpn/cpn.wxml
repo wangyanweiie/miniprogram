@@ -1,0 +1,9 @@
+
+<!-- 1.组件普通使用 -->
+<!-- 
+<view class="title">我是cpn组件</view>
+<view class="content">哈哈哈哈哈哈</view>
+ -->
+ <!-- 组件通信 -->
+<view class="title title-class">{{title}}</view>
+<button size="mini" class="content">点击</button>

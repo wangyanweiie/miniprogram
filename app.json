@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/Learning/06-comps/comps",
     "pages/home/home",
     "pages/profile/profile",
     "pages/Learning/01-element/element",
@@ -18,6 +19,10 @@
   },
   "tabBar": {
     "list": [
+      {
+        "pagePath": "pages/Learning/06-comps/comps",
+        "text": "comps"
+      },
       {
         "pagePath": "pages/home/home",
         "text": "首页",
