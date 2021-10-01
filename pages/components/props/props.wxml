@@ -4,6 +4,8 @@
 <view class="title">我是cpn组件</view>
 <view class="content">哈哈哈哈哈哈</view>
  -->
- <!-- 组件通信 -->
+ <!-- 组件通信: 传递数据与样式 -->
 <view class="title title-class">{{title}}</view>
-<button size="mini" class="content">点击</button>
+<view class="content">你是年少的欢喜</view>
+
+<!-- 组件通信: 自定义事件 -->
