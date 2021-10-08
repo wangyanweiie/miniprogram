@@ -1,3 +1,1 @@
-
-<text>首页界面</text>
-<tab-control/>
+<tab-control titles="{{['流行','新款','精选']}}"/>

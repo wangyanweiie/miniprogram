@@ -65,7 +65,7 @@ Page({
    //2.正确方法: 通过this.setData({})修改存放在data中的属性
   addCount(){
     this.setData({
-        count: this.data.count + 1
+      count: this.data.count + 1
     })
   },
   //通过button获取用户信息
