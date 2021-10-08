@@ -1,5 +1,5 @@
 
-<!-- 1.组件普通使用 -->
+<!-- 1.封装组件普通使用 -->
 <!-- 
 <view class="title">我是cpn组件</view>
 <view class="content">哈哈哈哈哈哈</view>

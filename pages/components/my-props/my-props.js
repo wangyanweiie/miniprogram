@@ -1,10 +1,11 @@
 
 Component({
 
-  /* styleIsolation: 设置组件内样式与引入组件的页面样式是否相互影响
-   * isolated      默认值,两者互不影响;
-   * shared        两者相互影响;
-   * apply-shared  引入组件的页面样式可以影响到组件内部,反之不可以;
+  /* 
+  styleIsolation: 设置组件内样式与引入组件的页面样式是否相互影响
+   * isolated        默认值,两者互不影响;
+   * shared          两者相互影响;
+   * apply-shared    引入组件的页面样式可以影响到组件内部,反之不可以;
   */
   options:{
     styleIsolation:"isolated"
@@ -12,7 +13,7 @@ Component({
 
   /* 组件通信: 传递数据
    * 方式1=> title:String   设置类型
-   * 方式2=> title:{}       对象中可以设置类型与默认值,监听值的改变;*/
+   * 方式2=> title:{}       对象中可以设置类型与默认值,并且监听值的改变;*/
   properties: {
     title:{
       type:String,

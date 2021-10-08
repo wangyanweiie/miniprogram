@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "props":"../../components/props/props",
-    "eves":"../../components/eves/eves"
+    "my-props":"../../components/my-props/my-props",
+    "my-eves":"../../components/my-eves/my-eves"
   }
 }
