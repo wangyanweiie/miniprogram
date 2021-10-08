@@ -1,1 +1,2 @@
-<tab-control titles="{{['流行','新款','精选']}}"/>
+<tab-control titles="{{['流行','新款','精选']}}" 
+             bind:itemClick="titleClick"/>

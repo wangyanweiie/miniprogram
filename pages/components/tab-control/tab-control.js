@@ -12,10 +12,14 @@ Component({
   },
   methods:{
     itemClick(event){
+      const index = event.currentTarget.dataset.index;
+      const title = this.properties.titles[index];
+      //1.更新currentIndex: 传递的index索引保存在event对象中
       this.setData({
-        //更新currentIndex: 传递的index索引保存在event对象中
-        currentIndex: event.currentTarget.dataset.index
+        currentIndex: index
       })
+      //2.通知home页面发生了点击,并传递点击的索引与标题
+      this.triggerEvent('itemClick',{index,title})
     }
   }
 })
