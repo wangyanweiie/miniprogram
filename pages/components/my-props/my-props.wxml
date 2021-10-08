@@ -7,5 +7,3 @@
  <!-- 组件通信: 传递数据与样式 -->
 <view class="title title-class">{{title}}</view>
 <view class="content">你是年少的欢喜</view>
-
-<!-- 组件通信: 自定义事件 -->

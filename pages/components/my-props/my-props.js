@@ -2,7 +2,7 @@
 Component({
 
   /* 
-  styleIsolation: 设置组件内样式与引入组件的页面样式是否相互影响
+  styleIsolation: 设置组件内样式与引入组件的页面样式是否可以相互影响
    * isolated        默认值,两者互不影响;
    * shared          两者相互影响;
    * apply-shared    引入组件的页面样式可以影响到组件内部,反之不可以;
@@ -17,7 +17,7 @@ Component({
   properties: {
     title:{
       type:String,
-      value:"Hello",
+      value:"HelloWord",
       observer:function(newVal,oldVal){
         console.log(newVal,oldVal);
       }
@@ -26,13 +26,4 @@ Component({
   //组件通信: 传递样式
   externalClasses:['title-class'],
 
-  //组件的初始数据
-  data: {
-
-  },
-
-  //组件的方法列表
-  methods: {
-
-  }
 })

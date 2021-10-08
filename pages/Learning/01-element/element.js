@@ -64,7 +64,6 @@ Page({
    //1.错误方法: this.data.count++; 直接修改无法监听到内部属性的变化(无法实时响应)
    //2.正确方法: 通过this.setData({})修改存放在data中的属性
   addCount(){
-
     this.setData({
         count: this.data.count + 1
     })
