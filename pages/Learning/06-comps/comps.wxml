@@ -24,12 +24,21 @@
   （3）自定义事件
       * 组件发出事件: this.triggerEvent('发出事件名',{参数对象},{options})
       * 页面监听事件: bind:发出事件名="接收事件名"
+      * 注意: 传递的参数保存在event对象中(event.detail)
   （4）插槽: slot
+  （5）页面直接访问组件的属性或者方法
+      * 首先获取组件对象: const cpn = this.selectComponent("#id/.class")
+      * 其次调用其setData方法: cpn.setData({..})
  -->
  <my-props title="王言伟" title-class="purple-class"/>
  <my-props title="邵思彤" title-class="blue-class"/>
  <my-props title="王若兮" title-class="green-class"/>
  <my-props/>
 
+
+<!-- 页面监听组件发出的自定义事件 -->
  <text>\n当前计数为: {{count}}\n</text>
  <my-eves bind:addCount="addCount"/>
+
+ <!-- 页面直接访问组件内的属性/方法 -->
+ <my-sel id="my-sel" bindtap="increase"/>

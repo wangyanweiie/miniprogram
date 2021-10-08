@@ -1,13 +1,14 @@
 {
   "pages": [
+    "pages/Learning/06-comps/comps",
     "pages/home/home",
     "pages/profile/profile",
     "pages/Learning/01-element/element",
     "pages/Learning/02-wxss/wxss",
     "pages/Learning/03-wxml/wxml",
     "pages/Learning/04-wxs/wxs",
-    "pages/Learning/05-event/event",
-    "pages/Learning/06-comps/comps"
+    "pages/Learning/05-event/event"
+
   ],
   "window": {
     "navigationBarBackgroundColor": "#ff3b48",

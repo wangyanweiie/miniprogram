@@ -1,0 +1,2 @@
+<text>\n当前sel组件内的sum计数为: {{sum}}</text>
+<button size="mini">直接访问组件内的属性sum++</button>
