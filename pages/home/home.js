@@ -3,8 +3,13 @@ Page({
   data: {
 
   },
+  //***************自定义事件响应函数***************
+  //tab-control组件发出自定义事件的响应函数
+  titleClick(event){
+    console.log(`索引为${event.detail.index}的--${event.detail.title}--发生了点击`);
+  },
 
-  //*****************生命周期函数*****************
+  //******************生命周期函数******************
   //监听页面加载
   onLoad: function (options) {
 
@@ -44,11 +49,5 @@ Page({
   //用户点击右上角分享
   onShareAppMessage: function () {
 
-  },
-
-  //***************自定义事件响应函数***************
-  //tab-control组件发出自定义事件的响应函数
-  titleClick(event){
-    console.log(`索引为${event.detail.index}的--${event.detail.title}--发生了点击`);
   }
 })
