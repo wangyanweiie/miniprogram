@@ -8,4 +8,12 @@ Component({
   data: {
     sum:0
   },
+  //组件中的方法
+  methods:{
+    increaseSum(num){
+      this.setData({
+        sum: this.data.sum + num
+      })
+    }
+  }
 })

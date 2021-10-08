@@ -27,8 +27,13 @@
       * 注意: 传递的参数保存在event对象中(event.detail)
   （4）插槽: slot
   （5）页面直接访问组件的属性或者方法
-      * 首先获取组件对象: const cpn = this.selectComponent("#id/.class")
-      * 其次调用其setData方法: cpn.setData({..})
+      * 方式1：直接访问属性(不合理)
+        - 首先获取组件对象: const cpn = this.selectComponent("#id/.class")
+        - 其次调用其setData方法: cpn.setData({..})
+      * 方式2：直接访问方法
+        - 首先将需操作的属性通过自身的方法统一暴露出去
+        - 其次获取组件对象: const cpn = this.selectComponent("#id/.class")
+        - 最后调用其自身的方法: cpn.方法名
  -->
  <my-props title="王言伟" title-class="purple-class"/>
  <my-props title="邵思彤" title-class="blue-class"/>
