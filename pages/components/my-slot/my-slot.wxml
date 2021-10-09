@@ -1,0 +1,6 @@
+<view>slot组件的头部</view>
+<!-- <slot/> -->
+<view class="top"><slot/></view>
+<view class="middle"><slot/></view>
+<view class="bottom"><slot/></view>
+<view>slot组件的尾部</view>

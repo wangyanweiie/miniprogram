@@ -26,6 +26,8 @@
       * 页面监听事件: bind:发出事件名="接收事件名"
       * 注意: 传递的参数保存在event对象中(event.detail)
   （4）插槽: slot
+      * 单个插槽: 普通插槽
+      * 多个插槽: 具名插槽
   （5）页面直接访问组件的属性或者方法
       * 方式1：直接访问属性(不合理)
         - 首先获取组件对象: const cpn = this.selectComponent("#id/.class")
@@ -47,3 +49,7 @@
 
  <!-- 页面直接访问组件内的属性/方法 -->
  <my-sel id="my-sel" bindtap="increase"/>
+
+ <!-- 插槽的使用 -->
+ <my-slot>
+ </my-slot>
