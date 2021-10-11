@@ -1,7 +1,9 @@
 // pages/components/my-slot/my-slot.js
 Component({
+  options:{
+    multipleSlots: true
+  },
   //组件的属性列表
-
   properties: {
 
   },

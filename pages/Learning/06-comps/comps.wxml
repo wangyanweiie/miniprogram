@@ -28,6 +28,8 @@
   （4）插槽: slot
       * 单个插槽: 普通插槽
       * 多个插槽: 具名插槽
+        - 需要给每一个插槽添加一个name属性: name="xxx",替换时使用: slot="xxx"
+        - 必须在组件的Component中添加选项: options:{multipleSlots: true}
   （5）页面直接访问组件的属性或者方法
       * 方式1：直接访问属性(不合理)
         - 首先获取组件对象: const cpn = this.selectComponent("#id/.class")
@@ -52,4 +54,5 @@
 
  <!-- 插槽的使用 -->
  <my-slot>
+  <button size="mini" slot="slot2">哈哈哈哈</button>
  </my-slot>
