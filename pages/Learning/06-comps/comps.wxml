@@ -64,5 +64,5 @@
 
  <!-- 插槽的使用 -->
  <my-slot>
-  <button size="mini" slot="slot2">哈哈哈哈</button>
+  <view size="mini" slot="slot2">我替换第二个插槽</view>
  </my-slot>
