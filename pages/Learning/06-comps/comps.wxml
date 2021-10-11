@@ -38,6 +38,16 @@
         - 首先将需操作的属性通过自身的方法统一暴露出去
         - 其次获取组件对象: const cpn = this.selectComponent("#id/.class")
         - 最后调用其自身的方法: cpn.方法名
+
+  4.Component构造器
+    * options:          组件的配置项
+    * properties:       组件通信 传递数据
+    * externalClasses:  组件通信 传递样式
+    * data:             组件内部的初始数据
+    * methods:          组件内部的方法
+    * observer:         监听properties/data中数据的改变
+    * pageLifetimes:    所在页面的生命周期函数
+    * lifetimes:        组件本身的生命周期函数
  -->
  <my-props title="王言伟" title-class="purple-class"/>
  <my-props title="邵思彤" title-class="blue-class"/>
