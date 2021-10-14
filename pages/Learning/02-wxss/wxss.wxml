@@ -16,7 +16,10 @@
       在iphoine6机型下      1px = 2rpx(作为设计稿标准)
       在iphoine6Plus机型下  1px = 1.81rpx
 
-  4.样式导入: @import '样式所在的路径(相对/绝对)'
+  4.样式导入
+    * @import '样式所在的路径'
+    * @import url('样式所在的路径')
+    
   5.官方样式库
     * https://github.com/Tencent/weui-wxss
     * 下载打开dist文件夹导入需要组件的 wxml以及wxss与js文件内容

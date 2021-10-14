@@ -19,6 +19,7 @@
     * disabled     设置按钮禁止点击
     * loading      设置按钮为加载中的状态
     * hover-class  可以绑定class设置按钮点击后的颜色变化
+    ---------
     * bindtap      可以绑定响应函数监听按钮的点击事件
     * open-type="getUserInfo"   设置按钮点击获取用户信息
       bindgetuserinfo="响应事件"
@@ -34,7 +35,7 @@
 
 <!--
   view视图组件: 块级元素,类似于div常作为容器;
-    * hover-class 可以绑定class设置点击后的样式变化
+    * hover-class             可以绑定class设置点击后的样式变化
     * hover-stop-propagation  设置是否阻止点击事件冒泡
     ......
 -->
@@ -48,9 +49,9 @@
 
 <!--
   image组件: 内块元素,可以写成单标签,默认有固定大小占据页面位置 (320*240)
-    * src="路径"  本地图片/远程图片
-    * lazyload    设置图片懒加载 (前三屏依旧是一次性加载)
-    * mode        设置图片的裁剪模式与缩放模式,默认scaleToFill;
+    * src="路径"              本地图片/远程图片
+    * lazyload                设置图片懒加载 (前三屏依旧是一次性加载)
+    * mode                    设置图片的裁剪模式与缩放模式,默认scaleToFill;
     * show-menu-by-longpress  设置长按图片弹出识别小程序码
       ---------
     * bindload    监听图片加载完成事件
@@ -71,7 +72,7 @@
     * password      设置密码框输入内容不可见
     * disabled      设置输入框禁用
     * confirm-type  设置弹出键盘右下角完成的文字,仅在type="text"时有效;
-    --------
+    -----------
     * bindinput     当输入框输入内容时触发
     * bindfocus     当输入框过去焦点时触发
     * bindblur      当输入框失去焦点时触发
@@ -87,7 +88,7 @@
   scroll-view组件：局部滚动
     * scroll-x          设置局部水平滚动
     * scroll-y          设置局部垂直滚动
-    -----------
+    ------------
     * bindscroll        监听局部滚动的位置
     * bindscrolltoupper 监听滚动到顶部或者左侧
     * bindscrolltolower 监听滚动到底部或者右侧

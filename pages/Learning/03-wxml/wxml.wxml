@@ -20,15 +20,13 @@
     * 语法: 
       ①普通使用: 
         <template name="标识名">...</template>   
-        <template is="标识名">
+        <template is="标识名"/>
       ②传值使用:
         <template name="标识名">
           <text>{{变量名key1}}</text>
           <text>{{变量名key2}}\n</text>
         </template>   
-        <template is="标识名" data="key1:val1,key2:val2">
-
-  6.
+        <template is="标识名" data="key1:val1,key2:val2"/>
  -->
 
  <!-- block -->
